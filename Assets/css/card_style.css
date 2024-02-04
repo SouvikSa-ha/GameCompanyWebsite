@@ -1,0 +1,104 @@
+/* #region[card image overlay]*/
+.content {
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.content .content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: opacity 0.15s ease-in;
+    opacity: 0;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.content:hover .content-overlay {
+    opacity: 1
+}
+
+.content-image {
+    transition: 0.3s ease-out;
+}
+
+.content:hover .content-image {
+    transform: scale(1.25);
+    transition: 0.3s ease-out;
+}
+
+.content:hover .content-details {
+    opacity: 1
+}
+
+.wishlist-btn{
+    padding: 0px 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+.try-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.cart-btn{
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+    z-index: 10;
+    border:none;
+}
+
+.cart-btn:hover{
+    border:none;
+    color: rgb(56, 56, 56);
+}
+
+/* #endregion */
+
+/* #region[card body fade] */
+.product{
+    position: relative;
+}
+.product .specifies {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    transition: .5s 
+}
+
+.product:hover .specifies {
+    height: auto;
+    transform: translateY(calc(-100% + 95px));
+}
+
+.product .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.product .base{
+    margin-bottom: 70px;
+    transition: .5s ease-in;
+}
+
+.product:hover .line-clamp{
+    display: block;
+}
+.product:hover .base{
+    transition: .5s ease-out;
+    margin-bottom: 10px;
+}
+
+/* #endregion */

@@ -1,0 +1,68 @@
+.box, ._box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box svg, ._box svg {
+    width: 100px;
+    height: 100px;
+}
+
+.box svg circle {
+    transform: rotate(-90deg) translate(0, 0);
+    transform-origin: center;
+    position: relative;
+    fill: none;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray:  220;
+    stroke-dashoffset: 220;
+}
+
+.box svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: rgb(65, 65, 65);
+}
+.box #b1 svg circle:nth-child(2) {
+    stroke-dashoffset: calc(220 - (220 * 90)/100);
+    stroke: #d10b4f;
+}
+.box #b2 svg circle:nth-child(2) {
+    stroke-dashoffset: calc(220 - (220 * 70)/100);
+    stroke: #d10b4f;
+}
+
+.box p, ._box p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._box svg circle {
+    display: block;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dashoffset: -2.5;
+}
+._box svg circle:nth-child(1) {
+    stroke-dasharray: 51.548667764616276 5;
+    stroke: rgb(65 65 65);
+}
+._box svg circle:nth-child(2) {
+    stroke-dasharray: 51.548667764616276 5
+                      51.548667764616276 5
+                      51.548667764616276 5
+                      51.548667764616276
+                      226.1946710584651;
+    stroke: #d10b4f; 
+}
